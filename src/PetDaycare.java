@@ -13,10 +13,10 @@ public class PetDaycare {
 
         // read the six input lines (README.md): two names and species, the food amount, and the play count
         String firstName = input.nextLine().trim();
-
+        String firstSpecies = input.nextLine().trim();
 
         // create two Pet objects (see the UML diagram in README.md for the constructor)
-
+        Pet firstPet = new Pet(firstName,firstSpecies);
 
         // feed the first pet the food amount
 

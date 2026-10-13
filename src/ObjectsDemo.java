@@ -16,7 +16,9 @@ public class ObjectsDemo {
 
     public static void main(String[] args) {
 
-        // creating Enemy objects
+        
+
+        // // creating Enemy objects
         Enemy dragon = new Enemy("Dragon", 500, 60);
         Enemy goblin = new Enemy("Goblin", 30, 4);
 
@@ -27,8 +29,10 @@ public class ObjectsDemo {
         System.out.println("goblin.damage = " + goblin.damage);
 
         // Nothing stops this (yet), because the attributes are public
-        goblin.health = -9999;
-        System.out.println("goblin.health = " + goblin.health + "   <- should this be allowed?");
+        // goblin.health = -9999;
+        // System.out.println("goblin.health = " + goblin.health + "   <- should this be allowed?");
+        dragon.health -= 100;
+        System.out.println("dragon.health = " + dragon.health);
 
         // calling methods with dot notation
         goblin.takeDamage(25);

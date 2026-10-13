@@ -30,11 +30,11 @@ You don't need to see a class's code to use it. A **UML class diagram** lists ev
 │ + name : String                    │
 │ + health : int                     │
 │ + damage : int                     │
-├────────────────────────────────────┤
+├────────────────────────────────────┤           
 │ + Enemy(name : String,             │
 │         health : int,              │
-│         damage : int)              │
-│ + attack() : int                   │
+│         damage : int)              |
+| + attack() : int                   │
 │ + takeDamage(amount : int) : void  │
 └────────────────────────────────────┘
 ```
@@ -47,7 +47,7 @@ You don't need to see a class's code to use it. A **UML class diagram** lists ev
 | Same name as the class | `+ Enemy(...)` | The **constructor**, which creates new objects. No return type. |
 | `+` | | Public: code outside the class can use it |
 
-UML doesn't require constructors, but in this course we include them so the diagram shows how objects get made.
+The first method `Enemy(name, health, damage)` is called the *constructor*.  It normally isn't listed in the methods, but we're listing it today so we know how to create an object.
 
 ---
 
@@ -61,7 +61,7 @@ Enemy dragon = new Enemy("Dragon", 500, 60);
 ```
 
 - The variable's type is the class name: `Enemy`.
-- The arguments must match the constructor in the UML, **in the same order and with the same types**: a `String` (name), then two `int`s (first health then damage). `new Enemy(30, "Goblin", 4)` doesn't compile.
+- The arguments must match the attributes in the *constructor*, **in the same order and with the same types**: a `String` (name), then two `int`s (first health then damage). `new Enemy(30, "Goblin", 4)` doesn't compile.
 
 
 ---
